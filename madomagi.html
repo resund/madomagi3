@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<body>
+<form>
+    <h1>
+        通常時
+    </h1>
+    ゲーム数：<input type="number" name="normal_number_of_games" size="40" maxlength="20">
+    <p>
+        <input type="radio" name="suica" value="スイカ" checked="checked">スイカ
+        <input type="radio" name="suica" value="弱チェ">弱チェリー
+        <input type="radio" name="suica" value="強チェ">強チェリー
+        <input type="radio" name="suica" value="チャンス目">チャンス目
+        <input type="radio" name="suica" value="特殊役">特殊役
+        <input type="radio" name="suica" value="中段チェリー">中段チェリー
+        <input type="radio" name="suica" value="フェイク前兆">フェイク前兆
+        <input type="radio" name="suica" value="ボーナス当選">ボーナス当選
+    </p>
+    <input type="button" value="リストに追加" id="normal_add">
+    <table border="1" id="normal_list">
+        <tr>
+            <th>ゲーム数</th>
+            <th>イベント</th>
+        </tr>
+    </table>
+
+    <br><br>
+    <h1>
+        マギカチャレンジ
+    </h1>
+    <input type="radio" name="mode" value="通常" checked="checked">通常
+    <input type="radio" name="mode" value="チャンス">チャンス
+    <br>
+    <select name="soul_gem1_color">
+        <option value="さやか" selected>さやか</option>
+        <option value="まみ">まみ</option>
+        <option value="杏子">杏子</option>
+        <option value="ほむら">ほむら</option>
+        <option value="まどか">まどか</option>
+    </select>
+    <input type="radio" name="soul_gem1_result" value="×" checked="checked">×
+    <input type="radio" name="soul_gem1_result" value="○">○
+    <br>
+    <select name="soul_gem2_color">
+        <option value="さやか" selected>さやか</option>
+        <option value="まみ">まみ</option>
+        <option value="杏子">杏子</option>
+        <option value="ほむら">ほむら</option>
+        <option value="まどか">まどか</option>
+    </select>
+    <input type="radio" name="soul_gem2_result" value="×" checked="checked">×
+    <input type="radio" name="soul_gem2_result" value="○">○
+    <br>
+    <select name="soul_gem3_color">
+        <option value="さやか" selected>さやか</option>
+        <option value="まみ">まみ</option>
+        <option value="杏子">杏子</option>
+        <option value="ほむら">ほむら</option>
+        <option value="まどか">まどか</option>
+    </select>
+    <input type="radio" name="soul_gem3_result" value="×" checked="checked">×
+    <input type="radio" name="soul_gem3_result" value="○">○
+    <br>
+    <input type="button" value="リストに追加" id="challenge_add">
+    <table border="1" id="challenge_result_list">
+        <tr>
+            <th>１つ目</th>
+            <th>２つ目</th>
+            <th>３つ目</th>
+        </tr>
+    </table>
+
+    <br><br>
+    <h1>
+        マギカラッシュ時(AT)
+    </h1>
+    <h4>上乗せ</h4>
+    枚数：<input type="number" name="rush_zone_get_number" size="40" maxlength="20">
+    <p>
+        <input type="radio" name="rush_zone_type" value="ホーリークインテット" checked="checked">ホーリークインテット
+        <input type="radio" name="rush_zone_type" value="ほむらVSマミ">ほむらVSマミ
+        <input type="radio" name="rush_zone_type" value="悪魔ほむら">悪魔ほむら
+        <input type="radio" name="rush_zone_type" value="マギカボーナス">マギカボーナス
+    </p>
+    <input type="button" value="リストに追加" id="rush_zone_add">
+    <table border="1" id="rush_zone_list">
+        <tr>
+            <th>特化ゾーン</th>
+            <th>上乗せ枚数</th>
+        </tr>
+    </table>
+
+    <br><br>
+    <h4>高確率ステージ</h4>
+    突入ゲーム数：<input type="number" name="rush_number_of_games" size="40" maxlength="20">
+    <p>
+        <input type="radio" name="stage" value="満月のバス停" checked="checked">満月のバス停
+        <input type="radio" name="stage" value="魔女の井戸">魔女の井戸
+        <input type="radio" name="stage" value="マユの塔">マユの塔
+    </p>
+    <input type="button" value="リストに追加" id="rush_stage_add">
+    <table border="1" id="rush_list">
+        <tr>
+            <th>高確率突入ゲーム数</th>
+            <th>ステージ</th>
+        </tr>
+    </table>
+
+    <br><br>
+    <h4>トータル</h4>
+    枚数：<input type="number" name="result_total_number" size="40" maxlength="20">
+    ゲーム数：<input type="number" name="result_total_number_of_games" size="40" maxlength="20">
+
+    <input type="button" value="リストに追加" id="rush_result_add">
+    <table border="1" id="rush_result_list">
+        <tr>
+            <th>枚数</th>
+            <th>ゲーム数</th>
+        </tr>
+    </table>
+
+    <br><br>
+    <h1>
+        サマリー
+    </h1>
+
+    <table border="1" id="rush_summary_list">
+        <tr>
+            <th>枚数</th>
+            <th>ゲーム数</th>
+        </tr>
+    </table>
+</form>
+</body>
+
+<script>
+    /**
+     * 通常時
+     */
+    $('#normal_add').click(function () {
+        var normal_number_of_games = $('input[name="normal_number_of_games"]').val();
+        var event_type = $('input[name="suica"]:checked').val();
+        $('#normal_list').append('<tr><td>' + normal_number_of_games + '</td><td>' + event_type + '</td></tr>');
+    });
+
+    /**
+     * マギカチャレンジ
+     */
+    $('#challenge_add').click(function () {
+        var soul_gem1_color = $('[name="soul_gem1_color"]').val();
+        var soul_gem1_result = $('input[name="soul_gem1_result"]:checked').val();
+        var soul_gem2_color = $('[name="soul_gem2_color"]').val();
+        var soul_gem2_result = $('input[name="soul_gem2_result"]:checked').val();
+        var soul_gem3_color = $('[name="soul_gem3_color"]').val();
+        var soul_gem3_result = $('input[name="soul_gem3_result"]:checked').val();
+        $('#challenge_result_list').append('<tr><td>' + soul_gem1_color + '：' + soul_gem1_result + '</td><td>' + soul_gem2_color + '：' + soul_gem2_result + '</td><td>' + soul_gem3_color + '：' + soul_gem3_result + '</tr>');
+    });
+
+    /**
+     * マギカラッシュ時(AT)
+     */
+    // 上乗せ枚数
+    $('#rush_zone_add').click(function () {
+        var rush_zone_get_number = $('input[name="rush_zone_get_number"]').val();
+        var rush_zone_type = $('input[name="rush_zone_type"]:checked').val();
+        $('#rush_zone_list').append('<tr><td>' + rush_zone_type + '</td><td>' + rush_zone_get_number + '</td></tr>');
+    });
+
+    // 高確率ステージ
+    $('#rush_stage_add').click(function () {
+        var rush_number_of_games = $('input[name="rush_number_of_games"]').val();
+        var stageType = $('input[name="stage"]:checked').val();
+        $('#rush_list').append('<tr><td>' + rush_number_of_games + '</td><td>' + stageType + '</td></tr>');
+    });
+
+    // トータル
+    $('#rush_result_add').click(function () {
+        var result_total_number = $('input[name="result_total_number"]').val();
+        var result_total_number_of_games = $('input[name="result_total_number_of_games"]').val();
+        $('#rush_result_list').append('<tr><td>' + result_total_number + '</td><td>' + result_total_number_of_games + '</td></tr>');
+    });
+
+
+</script>
