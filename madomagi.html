@@ -19,22 +19,19 @@
     </h1>
     ゲーム数：<input type="number" name="normal_number_of_games" size="40" maxlength="20">
     <p>
-        <input type="radio" name="suica" value="スイカ" checked="checked">スイカ
-        <input type="radio" name="suica" value="弱チェ">弱チェリー
-        <input type="radio" name="suica" value="強チェ">強チェリー
-        <input type="radio" name="suica" value="チャンス目">チャンス目
-        <input type="radio" name="suica" value="特殊役">特殊役
-        <input type="radio" name="suica" value="中段チェリー">中段チェリー
-        <input type="radio" name="suica" value="フェイク前兆">フェイク前兆
-        <input type="radio" name="suica" value="ボーナス当選">ボーナス当選
+        <input type="radio" name="normal_koyaku" value="スイカ" checked="checked">スイカ
+        <input type="radio" name="normal_koyaku" value="弱チェリー">弱チェリー
+        <input type="radio" name="normal_koyaku" value="強チェリー">強チェリー
+        <input type="radio" name="normal_koyaku" value="チャンス目">チャンス目
+        <input type="radio" name="normal_koyaku" value="特殊役">特殊役
+        <input type="radio" name="normal_koyaku" value="中段チェリー">中段チェリー
+        <br>
+        <input type="radio" name="normal_koyaku" value="フェイク前兆">フェイク前兆
+        <input type="radio" name="normal_koyaku" value="ボーナス当選">ボーナス当選
+        <input type="radio" name="normal_koyaku" value="干渉遮断フィールド突入">干渉遮断フィールド突入
+        <input type="radio" name="normal_koyaku" value="キュウベエチャレンジ突入">キュウベエチャレンジ突入
     </p>
     <input type="button" value="リストに追加" id="normal_add">
-    <table border="1" id="normal_list">
-        <tr>
-            <th>ゲーム数</th>
-            <th>イベント</th>
-        </tr>
-    </table>
     </p>
 
     <p>
@@ -44,6 +41,7 @@
     </h1>
     <input type="radio" name="mode" value="通常" checked="checked">通常
     <input type="radio" name="mode" value="チャンス">チャンス
+    <input type="radio" name="mode" value="悪魔">悪魔
     <br>
     <select name="soul_gem1_color">
         <option value="さやか" selected>さやか</option>
@@ -76,13 +74,6 @@
     <input type="radio" name="soul_gem3_result" value="○">○
     <br>
     <input type="button" value="リストに追加" id="challenge_add">
-    <table border="1" id="challenge_result_list">
-        <tr>
-            <th>１つ目</th>
-            <th>２つ目</th>
-            <th>３つ目</th>
-        </tr>
-    </table>
     </p>
 
     <br><br>
@@ -93,36 +84,27 @@
     <h4>上乗せ</h4>
     枚数：<input type="number" name="rush_zone_get_number" size="40" maxlength="20">
     <p>
-        <input type="radio" name="rush_zone_type" value="ホーリークインテット" checked="checked">ホーリークインテット
+        <input type="radio" name="rush_zone_type" value="ホリクイ" checked="checked">ホリクイ
         <input type="radio" name="rush_zone_type" value="ほむらVSマミ">ほむらVSマミ
         <input type="radio" name="rush_zone_type" value="悪魔ほむら">悪魔ほむら
         <input type="radio" name="rush_zone_type" value="マギカボーナス">マギカボーナス
     </p>
     <input type="button" value="リストに追加" id="rush_zone_add">
-    <table border="1" id="rush_zone_list">
-        <tr>
-            <th>特化ゾーン</th>
-            <th>上乗せ枚数</th>
-        </tr>
-    </table>
-    </p>
 
     <br><br>
     <p>
     <h4>高確率ステージ</h4>
     突入ゲーム数：<input type="number" name="rush_number_of_games" size="40" maxlength="20">
     <p>
-        <input type="radio" name="stage" value="満月のバス停" checked="checked">満月のバス停
-        <input type="radio" name="stage" value="魔女の井戸">魔女の井戸
-        <input type="radio" name="stage" value="マユの塔">マユの塔
+        <input type="radio" name="koukaku_koyaku" value="スイカ" checked="checked">スイカ
+        <input type="radio" name="koukaku_koyaku" value="弱チェリー">弱チェリー
+        <input type="radio" name="koukaku_koyaku" value="強チェリー">強チェリー
+        <input type="radio" name="koukaku_koyaku" value="チャンス目">チャンス目
+        <input type="radio" name="koukaku_koyaku" value="特殊役">特殊役
+        <input type="radio" name="koukaku_koyaku" value="中段チェリー">中段チェリー
     </p>
     <input type="button" value="リストに追加" id="rush_stage_add">
-    <table border="1" id="rush_list">
-        <tr>
-            <th>高確率突入ゲーム数</th>
-            <th>ステージ</th>
-        </tr>
-    </table>
+    </p>
 
     <br><br>
     <h4>トータル</h4>
@@ -132,12 +114,6 @@
 
     <br>
     <input type="button" value="リストに追加" id="rush_result_add">
-    <table border="1" id="rush_result_list">
-        <tr>
-            <th>枚数</th>
-            <th>ゲーム数</th>
-        </tr>
-    </table>
     </p>
 
     <br><br>
@@ -151,6 +127,31 @@
         </tr>
     </table>
     </p>
+
+    <p>
+    <h1>設定示唆</h1>
+    <p>なぎさはもう一度,チーズが食べたかっただけなのです(奇数示唆)<br>
+        出現数：<span id="setting_suggestion_A_count">0</span><br><input type="button" value="加算" id="setting_suggestion_A"><br><br>
+    </p>
+    <p>しー!ｲﾝｷｭﾍﾞｰﾀｰに気づかれてしまうのです(偶数示唆)<br>
+        出現数：<span id="setting_suggestion_B_count">0</span><br><input type="button" value="加算" id="setting_suggestion_B"><br><br>
+    </p>
+    <p>こう見えて私は円環の理の一部なのです(偶数示唆[強])<br>
+        出現数：<span id="setting_suggestion_C_count">0</span><br><input type="button" value="加算" id="setting_suggestion_C"><br><br>
+    </p>
+    <p>まどかの本当の力と記憶はなぎさたちが預かっているのです(高設定示唆)<br>
+        出現数：<span id="setting_suggestion_D_count">0</span><br><input type="button" value="加算" id="setting_suggestion_D"><br><br>
+    </p>
+    <p>未来には希望があふれているのです(設定4以上濃厚)<br>
+        出現数：<span id="setting_suggestion_E_count">0</span><br><input type="button" value="加算" id="setting_suggestion_E"><br><br>
+    </p>
+    <p>訳が分からないよ(設定5以上濃厚)<br>
+        出現数：<span id="setting_suggestion_F_count">0</span><br><input type="button" value="加算" id="setting_suggestion_F"><br><br>
+    </p>
+    <p>今の私は魔なる者,神の理にあらがいこの手に勝利をつかみ取る存在(設定6確定)<br>
+        出現数：<span id="setting_suggestion_G_count">0</span><br><input type="button" value="加算" id="setting_suggestion_G"><br><br>
+    </p>
+    </p>
 </form>
 </body>
 
@@ -160,21 +161,22 @@
      */
     $('#normal_add').click(function () {
         var normal_number_of_games = $('input[name="normal_number_of_games"]').val();
-        var event_type = $('input[name="suica"]:checked').val();
-        $('#normal_list').append('<tr><td>' + normal_number_of_games + '</td><td>' + event_type + '</td></tr>');
+        var event_type = $('input[name="normal_koyaku"]:checked').val();
+        $('#rush_summary_list').append('<tr><td>通常</td><td>' + normal_number_of_games + '</td><td>' + event_type + '</td></tr>');
     });
 
     /**
      * マギカチャレンジ
      */
     $('#challenge_add').click(function () {
+        var mode = $('[name="mode"]:checked').val();
         var soul_gem1_color = $('[name="soul_gem1_color"]').val();
         var soul_gem1_result = $('input[name="soul_gem1_result"]:checked').val();
         var soul_gem2_color = $('[name="soul_gem2_color"]').val();
         var soul_gem2_result = $('input[name="soul_gem2_result"]:checked').val();
         var soul_gem3_color = $('[name="soul_gem3_color"]').val();
         var soul_gem3_result = $('input[name="soul_gem3_result"]:checked').val();
-        $('#challenge_result_list').append('<tr><td>' + soul_gem1_color + '：' + soul_gem1_result + '</td><td>' + soul_gem2_color + '：' + soul_gem2_result + '</td><td>' + soul_gem3_color + '：' + soul_gem3_result + '</tr>');
+        $('#rush_summary_list').append('<tr><td>マギカチャレンジ</td><td>' + mode + '</td>' + soul_gem1_color + '：' + soul_gem1_result + '</td><td>' + soul_gem2_color + '：' + soul_gem2_result + '</td><td>' + soul_gem3_color + '：' + soul_gem3_result + '</tr>');
     });
 
     /**
@@ -184,21 +186,29 @@
     $('#rush_zone_add').click(function () {
         var rush_zone_get_number = $('input[name="rush_zone_get_number"]').val();
         var rush_zone_type = $('input[name="rush_zone_type"]:checked').val();
-        $('#rush_zone_list').append('<tr><td>' + rush_zone_type + '</td><td>' + rush_zone_get_number + '</td></tr>');
+        $('#rush_summary_list').append('<tr><td>マギカラッシュ</td><td>' + rush_zone_type + '</td><td>' + rush_zone_get_number + '</td></tr>');
     });
 
     // 高確率ステージ
     $('#rush_stage_add').click(function () {
         var rush_number_of_games = $('input[name="rush_number_of_games"]').val();
-        var stageType = $('input[name="stage"]:checked').val();
-        $('#rush_list').append('<tr><td>' + rush_number_of_games + '</td><td>' + stageType + '</td></tr>');
+        var stageType = $('input[name="koukaku_koyaku"]:checked').val();
+        $('#rush_summary_list').append('<tr><td>マギカラッシュ</td><td>' + rush_number_of_games + '</td><td>' + stageType + '</td></tr>');
     });
 
     // トータル
     $('#rush_result_add').click(function () {
         var result_total_number = $('input[name="result_total_number"]').val();
         var result_total_number_of_games = $('input[name="result_total_number_of_games"]').val();
-        $('#rush_result_list').append('<tr><td>' + result_total_number + '</td><td>' + result_total_number_of_games + '</td></tr>');
+        $('#rush_summary_list').append('<tr><td>マギカラッシュ</td><td>' + result_total_number + '</td><td>' + result_total_number_of_games + '</td></tr>');
+    });
+
+    /**
+     * 設定示唆
+     */
+    $('input[id^=setting_suggestion_]').click(function () {
+        var count_id = '#' + $(this).attr('id') + '_count';
+        $(count_id).text(Number($(count_id).text()) + 1);
     });
 
 
